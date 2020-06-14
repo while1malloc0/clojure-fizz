@@ -40,3 +40,18 @@
     (fizzy? x) "fizz"
     (buzzy? x) "buzz"
     :else (str x)))
+
+;; A more "optimal" solution that composes functions and appends the result
+;; (defn fizz [x]
+;;   (if (= (mod x 3) 0) "fizz" ""))
+
+;; (defn buzz [x]
+;;   (if (= (mod x 5) 0) "buzz" ""))
+
+;; (defn else-string [x s]
+;;   (if-not (empty? s) s (str x)))
+
+;; (defn fizz-buzz [x]
+;;   (let [fizz-str (fizz x)
+;;         buzz-str (buzz x)]
+;;     (else-string x (str fizz-str buzz-str))))
